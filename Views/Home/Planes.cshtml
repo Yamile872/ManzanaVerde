@@ -1,0 +1,46 @@
+﻿@page
+@model WebApplication1.Views.Home.Planes
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalles del Plan - Manzana Verde</title>
+    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
+</head>
+<body>
+<header>
+    <nav>
+        <a href="/"><img src="~/images/logo.png" alt="Manzana Verde" /></a>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/Account/Login">Iniciar Sesión</a></li>
+            <li><a href="/Account/Register">Registrarse</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="plan-detalle">
+        <h1>Plán basico</h1>
+        <p>Comida, bebidas a solo 20USD$</p>
+        <h2>Preferencias</h2>
+        <form asp-action="Suscribir" method="post">
+            <input type="hidden" name="id" value=" " />
+            <label for="restricciones">Restricciones Alimentarias:</label>
+            <input type="text" id="restricciones" name="preferencias.Restricciones" />
+            <label for="objetivos">Objetivos de Salud:</label>
+            <input type="text" id="objetivos" name="preferencias.Objetivos" />
+            <button type="submit" class="btn">Suscribirse ahora</button>
+        </form>
+    </section>
+</main>
+<footer>
+    <p>© 2024 Manzana Verde. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inicio - Manzana Verde</title>
+    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
+</head>
+<body>
+<header>
+    <nav>
+        <a href="/"><img src="~/images/logo.png" alt="Manzana Verde" /></a>
+        <ul>
+            <li><a asp-area="" asp-controller="Home" asp-action="Planes">Planes de Alimentación</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="Login">Iniciar Sesión</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="Registro">Registrarse</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="banner">
+        <h1>Planes de Alimentación Saludable a Domicilio</h1>
+        <a href="/Plan" class="btn">Explorar Planes</a>
+    </section>
+    <section class="planes">
+        <h2>Nuestros Planes</h2>
+        <div class="plan">
+            <h3>Bajar de peso</h3>
+            <p>Descripción del plan para bajar de peso.</p>
+            <a href="/Plan/Detalle/1" class="btn">Ver Más</a>
+        </div>
+        <div class="plan">
+            <h3>Haz músculo</h3>
+            <p>Descripción del plan para ganar músculo.</p>
+            <a href="/Plan/Detalle/2" class="btn">Ver Más</a>
+        </div>
+        <div class="plan">
+            <h3>Solo vive sano y feliz</h3>
+            <p>Descripción del plan para un estilo de vida saludable.</p>
+            <a href="/Plan/Detalle/3" class="btn">Ver Más</a>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>© 2024 Manzana Verde. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>
